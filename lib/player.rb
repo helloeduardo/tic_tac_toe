@@ -4,6 +4,6 @@ class Player
   def initialize(name, token)
     @name = name
     @token = token
-  endg
+  end
 
 end
