@@ -10,6 +10,10 @@ class Game
     @players[0]
   end
 
+  def last_player
+    @players[1]
+  end
+
   def switch_player
     @players.reverse!
   end
@@ -24,9 +28,11 @@ class Game
   end
 
   def over?
-    board.win? || board.draw?
+    board.win?(last_player.token) || board.draw?
   end
 
-
+  def win?
+    board.win?(last_player.token)
+  end
 
 end
